@@ -2,7 +2,12 @@
   "name": "mapbox-gl-esri-sources",
   "version": "0.0.1",
   "description": "A module for making it easier to use Esri services in mapbox-gl or maplibre-gl.",
-  "main": "index.js",
+  "main": "dist/mapbox-gl-esri-sources.js",
+  "module": "dist/mapbox-gl-esri-sources.esm.js",
+  "browser": "dist/mapbox-gl-esri-sources.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rollup -c",
     "build-docs": "cross-env NODE_ENV=production webpack --config docs/webpack.config.js --mode production --progress --hide-modules",
