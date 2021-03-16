@@ -45,6 +45,7 @@
     "type": "git",
     "url": "https://github.com/frontiersi/mapbox-gl-esri-sources"
   },
+  "homepage": "https://frontiersi.github.io/mapbox-gl-esri-sources/",
   "author": "Rowan Winsemius",
   "license": "Apache-2.0"
 }
