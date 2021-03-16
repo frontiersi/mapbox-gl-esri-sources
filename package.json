@@ -36,6 +36,10 @@
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.14"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frontiersi/mapbox-gl-esri-sources"
+  },
   "author": "Rowan Winsemius",
   "license": "Apache-2.0"
 }
