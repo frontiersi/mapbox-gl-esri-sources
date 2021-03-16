@@ -7,7 +7,7 @@ A small library to make it easier to use various Esri Map Services on a mapbox-g
 `npm install mapbox-gl-esri-sources`
 
 ## Usage
-Check out the [docs](https://frontiersi.github.io/mapbox-gl-esri-sources)
+Check out the [docs](https://frontiersi.github.io/mapbox-gl-esri-sources/)
 
 
 ## Acknowledgements
