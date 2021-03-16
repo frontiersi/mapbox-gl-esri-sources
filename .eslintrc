@@ -1,0 +1,11 @@
+{
+    "extends": "mourner",
+    "parserOptions": {
+      "ecmaVersion": 2018
+    },
+    "rules": {
+      "space-before-function-paren": 0,
+      "semi": 0,
+      "prefer-arrow-callback": 0
+    }
+}

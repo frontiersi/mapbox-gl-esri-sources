@@ -1,0 +1,41 @@
+{
+  "name": "mapbox-gl-esri-sources",
+  "version": "0.0.1",
+  "description": "A module for making it easier to use Esri services in mapbox-gl or maplibre-gl.",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "build-docs": "cross-env NODE_ENV=production webpack --config docs/webpack.config.js --mode production --progress --hide-modules",
+    "dev": "cross-env webpack-dev-server --config docs/webpack.config.js --mode development --open --hot"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "ant-design-vue": "^1.7.3",
+    "ava": "^1.0.1",
+    "benchmark": "^2.1.4",
+    "cross-env": "^5.2.0",
+    "css-loader": "^2.1.0",
+    "eslint": "^5.12.0",
+    "eslint-config-mourner": "^3.0.0",
+    "esm": "^3.0.84",
+    "file-loader": "^6.0.0",
+    "json-loader": "^0.5.7",
+    "load-json-file": "^5.1.0",
+    "maplibre-gl": "^1.13.0-rc.5",
+    "remarkable": "^2.0.1",
+    "rollup": "^1.32.1",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-strip": "^1.2.1",
+    "rollup-plugin-terser": "^4.0.2",
+    "style-loader": "^2.0.0",
+    "vue": "^2.5.22",
+    "vue-loader": "^15.6.2",
+    "vue-router": "^3.5.1",
+    "vue-template-compiler": "^2.5.22",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "author": "Rowan Winsemius",
+  "license": "Apache-2.0"
+}
