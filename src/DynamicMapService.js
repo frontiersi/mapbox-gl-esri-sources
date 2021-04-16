@@ -14,6 +14,7 @@ export class DynamicMapService {
             layers: false,
             layerDefs: false,
             format: 'png24',
+            dpi: 96,
             transparent: true,
             getAttributionFromService: true
         }
@@ -60,9 +61,11 @@ export class DynamicMapService {
         // These are the bare minimum parameters
         const params = new URLSearchParams({
             bboxSR: 3857,
+            imageSR: 3857,
             format: this.options.format,
             layers: this._layersStr,
             transparent: this.options.transparent,
+            size: [256, 256],
             f: 'image'
         })
 

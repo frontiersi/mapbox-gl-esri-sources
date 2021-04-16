@@ -1,6 +1,9 @@
 Change Log
 ==========
 
+### v0.0.3
+Improve Dynamic Map Service requests by including a `imageSR`, `size` and `dpi` params. Setting `imageSR` particuarly helps with tile edges.
+
 ### v0.0.2
 Remove unused import from bundle
 
