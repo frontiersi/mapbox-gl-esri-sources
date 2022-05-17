@@ -91,7 +91,7 @@ export class VectorTileService {
 
     _retrieveStyle () {
         return new Promise((resolve, reject) => {
-            fetch(`${this.options.url}/${this._styleUrl}`)
+            fetch(`${this.options.url}/${this._styleUrl}`, this.esriServiceOptions.fetchOptions)
                 .then(response => response.json())
                 .then((data) => {
                     this._defaultStyleData = data.layers[0]
@@ -104,7 +104,7 @@ export class VectorTileService {
     getMetadata () {
         if (this._serviceMetadata !== null) return Promise.resolve(this._serviceMetadata)
         return new Promise((resolve, reject) => {
-            getServiceDetails(this.esriServiceOptions.url)
+            getServiceDetails(this.esriServiceOptions.url, this.esriServiceOptions.fetchOptions)
                 .then((data) => {
                     this._serviceMetadata = data
                     resolve(this._serviceMetadata)

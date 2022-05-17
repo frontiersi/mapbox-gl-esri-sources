@@ -32,7 +32,8 @@ vectorSrcOptions | object | An optional object that will be passed to the creati
         esriOptionsTable () {
             return md.render(`Option | Type | Default | Description
 -------| ---- | --------| -----------
-url | string | | **Required** URL of the VectorTileService.`)
+url | string | | **Required** URL of the VectorTileService.
+fetchOptions | object | |  A key value pair of options to pass to the [fetch](https://developer.mozilla.org/en-US/docs/Web/API/fetch) method as the init property.`)
         }
     },
     components: {
@@ -41,5 +42,3 @@ url | string | | **Required** URL of the VectorTileService.`)
 }
 
 </script>
-
-
