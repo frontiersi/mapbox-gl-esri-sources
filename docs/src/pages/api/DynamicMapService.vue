@@ -40,7 +40,8 @@ rasterSourceOptions | object | An optional object that will be passed to the cre
             return md.render(`Option | Type | Default | Description
 -------| ---- | --------| -----------
 url | string | | **Required** URL of the MapService. **Note** Map Service urls do not end in a number (use the layers option below).
-layers | array<string> | | An array of layer id's to restrict which layers to show from the service (eg [1, 2, 3]). 
+fetchOptions | object | |  A key value pair of options to pass to the [fetch](https://developer.mozilla.org/en-US/docs/Web/API/fetch) method as the init property. This can be used to pass through Authorisation headers where required.
+layers | array<string> | | An array of layer id's to restrict which layers to show from the service (eg [1, 2, 3]).
 format | string | png24 | Output format of the image
 transparent | boolean | true | Allow the server to produce transparent images
 layerDefs | object | | SQL filters to define what features will be included in the image rendered by the service. An object is used with keys that map each query to its respective layer. eg \`{ 3: "STATE_NAME='Kansas'", 9: "POP2007>25000" }\`
@@ -65,5 +66,3 @@ setAttributionFromService() | Sets the attribution on the map from the service m
 }
 
 </script>
-
-

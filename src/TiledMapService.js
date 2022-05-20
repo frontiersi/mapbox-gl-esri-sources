@@ -47,7 +47,7 @@ export class TiledMapService {
     getMetadata () {
         if (this._serviceMetadata !== null) return Promise.resolve()
         return new Promise((resolve, reject) => {
-            getServiceDetails(this.esriServiceOptions.url)
+            getServiceDetails(this.esriServiceOptions.url, this.esriServiceOptions.fetchOptions)
                 .then((data) => {
                     this._serviceMetadata = data
                     resolve(data)
