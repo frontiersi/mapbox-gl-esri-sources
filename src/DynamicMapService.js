@@ -58,6 +58,7 @@ export class DynamicMapService {
     }
 
     get _source () {
+        const tileSize = this.rasterSrcOptions ? this.rasterSrcOptions.tileSize ? this.rasterSrcOptions.tileSize : 256 : 256
         // These are the bare minimum parameters
         const params = new URLSearchParams({
             bboxSR: 3857,
@@ -65,7 +66,7 @@ export class DynamicMapService {
             format: this.options.format,
             layers: this._layersStr,
             transparent: this.options.transparent,
-            size: [256, 256],
+            size: [tileSize, tileSize],
             f: 'image'
         })
 
@@ -74,12 +75,12 @@ export class DynamicMapService {
         if (this._layerDefs) params.append('layerDefs', this._layerDefs)
 
         return {
-            ...this.rasterSrcOptions,
             type: 'raster',
             tiles: [
                 `${this.options.url}/export?bbox={bbox-epsg-3857}&${params.toString()}`
             ],
-            tileSize: 256
+            tileSize,
+            ...this.rasterSrcOptions
         }
     }
 
