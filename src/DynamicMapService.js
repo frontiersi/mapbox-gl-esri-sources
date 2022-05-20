@@ -123,10 +123,10 @@ export class DynamicMapService {
         }
     }
 
-    getMetadata () {
+    getMetadata() {
         if (this._serviceMetadata !== null) return Promise.resolve(this._serviceMetadata)
         return new Promise((resolve, reject) => {
-            getServiceDetails(this.esriServiceOptions.url)
+            getServiceDetails(this.esriServiceOptions.url, this.esriServiceOptions.fetchOptions)
                 .then((data) => {
                     this._serviceMetadata = data
                     resolve(this._serviceMetadata)
@@ -160,7 +160,7 @@ export class DynamicMapService {
         })
 
         return new Promise((resolve, reject) => {
-            fetch(`${this.esriServiceOptions.url}/identify?${params.toString()}`)
+            fetch(`${this.esriServiceOptions.url}/identify?${params.toString()}`, this.esriServiceOptions.fetchOptions)
                 .then(response => response.json())
                 .then(data => resolve(data))
                 .catch(error => reject(error))

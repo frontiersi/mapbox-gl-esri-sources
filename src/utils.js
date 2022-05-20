@@ -2,9 +2,9 @@ export function cleanTrailingSlash (url) {
     return url.replace(/\/$/, '')
 }
 
-export function getServiceDetails (url) {
+export function getServiceDetails (url, fetchOptions = {}) {
     return new Promise((resolve, reject) => {
-        fetch(`${url}?f=json`)
+        fetch(`${url}?f=json`, fetchOptions)
             .then(response => response.json())
             .then(data => resolve(data))
             .catch(error => reject(error))
