@@ -33,7 +33,7 @@ vectorSrcOptions | object | An optional object that will be passed to the creati
             return md.render(`Option | Type | Default | Description
 -------| ---- | --------| -----------
 url | string | | **Required** URL of the VectorTileService.
-fetchOptions | object | |  A key value pair of options to pass to the [fetch](https://developer.mozilla.org/en-US/docs/Web/API/fetch) method as the init property.`)
+fetchOptions | object | |  A key value pair of options to pass to the [fetch](https://developer.mozilla.org/en-US/docs/Web/API/fetch) method as the init property. This can be used to pass through Authorisation headers where required.`)
         }
     },
     components: {
