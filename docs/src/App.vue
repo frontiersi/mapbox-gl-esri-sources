@@ -39,16 +39,16 @@ export default {
   }
 
   #app {
-    background: #f7f7f7; 
+    background: white;
   }
  #contentArea {
    padding: 40px 60px;
-   background: white;
    min-height: 100vh;
  }
 
 #sidebar {
   padding: 40px 0px 40px 20px;
+  background: #f7f7f7;
 }
 
 #sidebar .ant-menu {

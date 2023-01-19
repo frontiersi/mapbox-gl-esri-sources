@@ -40,6 +40,10 @@ export default {
               key: 'TiledMapService'
             },
             {
+              title: 'Image Service',
+              key: 'ImageService'
+            },
+            {
               title: 'Vector Tile Service',
               key: 'VectorTileService'
             },
@@ -79,7 +83,20 @@ export default {
               }
             ]
           },
-               {
+          {
+            name: 'Image Service',
+            items: [
+              {
+                title: 'Basic Image Service',
+                key: 'ImageServiceBasic'
+              },
+              {
+                title: 'Identify features from Image Service',
+                key: 'ImageServiceIdentify'
+              }
+            ]
+          },
+          {
             name: 'Vector Tile Service',
             items: [
               {

@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { Map } from 'maplibre-gl'
+import { Map } from 'maplibre-gl/dist/maplibre-gl-unminified'
 import 'maplibre-gl/dist/maplibre-gl.css'
 
 export default {

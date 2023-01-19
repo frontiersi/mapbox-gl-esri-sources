@@ -1,4 +1,5 @@
 export {DynamicMapService} from './DynamicMapService'
 export {TiledMapService} from  './TiledMapService'
+export {ImageService} from './ImageService'
 export {VectorBasemapStyle} from './VectorBasemapStyle'
 export {VectorTileService} from './VectorTileService'

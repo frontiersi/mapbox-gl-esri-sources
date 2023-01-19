@@ -1,6 +1,10 @@
 Change Log
 ==========
 
+### v0.0.5
+Add an `ImageService` class
+Fix `layers` parameter for identify calls.
+
 ### v0.0.4
 Add support for fetch options to support authorization headers.
 

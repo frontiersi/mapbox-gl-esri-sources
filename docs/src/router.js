@@ -4,6 +4,7 @@ import Installation from './pages/Installation.vue'
 
 import DynamicMapService from './pages/api/DynamicMapService.vue'
 import TiledMapService from './pages/api/TiledMapService.vue'
+import ImageService from './pages/api/ImageMapService.vue'
 import VectorTileService from './pages/api/VectorTileService.vue'
 import VectorBasemapStyle from './pages/api/VectorBasemapStyle.vue'
 
@@ -13,6 +14,8 @@ import DynamicMapServiceIdentify from './pages/examples/DynamicMapServiceIdentif
 import DynamicMapServiceLayerDefs from './pages/examples/DynamicMapServiceLayerDefs.vue'
 import DynamicMapServiceTime from './pages/examples/DynamicMapServiceTime.vue'
 import TiledMapServiceBasic from './pages/examples/TiledMapServiceBasic.vue'
+import ImageServiceBasic from './pages/examples/ImageServiceBasic.vue'
+import ImageServiceIdentify from './pages/examples/ImageServiceIdentify.vue'
 import VectorTileServiceBasic from './pages/examples/VectorTileServiceBasic.vue'
 import VectorTileServiceStyled from './pages/examples/VectorTileServiceStyled.vue'
 import VectorStyleBasic from './pages/examples/VectorStyleBasic.vue'
@@ -38,6 +41,11 @@ const routes = [
         name: 'TiledMapService',
         path: '/tiled-map-service',
         component: TiledMapService
+    },
+    {
+        name: 'ImageService',
+        path: '/image-service',
+        component: ImageService
     },
     {
         name: 'VectorTileService',
@@ -77,6 +85,16 @@ const routes = [
                 name: 'TiledMapServiceBasic',
                 path: 'tiled-map-service',
                 component: TiledMapServiceBasic
+            },
+            {
+                name: 'ImageServiceBasic',
+                path: 'image-map-service',
+                component: ImageServiceBasic
+            },
+            {
+                name: 'ImageServiceIdentify',
+                path: 'image-service-identify',
+                component: ImageServiceIdentify
             },
             {
                 name: 'VectorTileServiceBasic',

@@ -135,6 +135,11 @@ export class DynamicMapService {
         })
     }
 
+
+    get _layersStrIdentify () {
+        return this._layersStr.replace('show', 'visible')
+    }
+
     identify (lnglat, returnGeometry) {
         const canvas = this._map.getCanvas()
         const bounds = this._map.getBounds().toArray()
@@ -153,7 +158,7 @@ export class DynamicMapService {
             returnGeometry,
             imageDisplay: `${canvas.width},${canvas.height},96`,
             mapExtent: `${bounds[0][0]},${bounds[0][1]},${bounds[1][0]},${bounds[1][1]}`,
-            layers: this._layersStr,
+            layers: this._layersStrIdentify,
             layerDefs: this._layerDefs,
             time: this._time,
             f: 'json'

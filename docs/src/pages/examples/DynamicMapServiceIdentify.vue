@@ -2,7 +2,7 @@
     <Example v-on:mapready="mapready">
         <template v-slot:content>
             <h4>Identifying features from a Dynamic Map Service</h4>
-            <p>You can use the <code>.identify</code> method to retrieve information for a lat-lon.<p>
+            <p>You can use the <code>.identify</code> method to retrieve information for a lat-lon.</p>
             <p>The returned data is in the esri-json format which, if required, can be converted to GeoJSON using the <a href="https://www.npmjs.com/package/@terraformer/arcgis">@terraformer/arcgis package</a>.</p>
         </template>
         <template v-slot:code>import {DynamicMapService} from 'mapbox-gl-esri-sources'
