@@ -29,6 +29,6 @@ export function updateAttribution (newAttribution, sourceId, map) {
         }
     }
 
-    map.style.sourceCaches[sourceId]._source.attribution = newAttribution
+    map.style._otherSourceCaches[sourceId]._source.attribution = newAttribution
     attributionController._updateAttributions()
 }

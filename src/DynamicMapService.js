@@ -93,8 +93,8 @@ export class DynamicMapService {
         const src = this._map.getSource(this._sourceId)
         src.tiles[0] = this._source.tiles[0]
         src._options = this._source
-        this._map.style.sourceCaches[this._sourceId].clearTiles()
-        this._map.style.sourceCaches[this._sourceId].update(this._map.transform)
+        this._map.style._otherSourceCaches[this._sourceId].clearTiles()
+        this._map.style._otherSourceCaches[this._sourceId].update(this._map.transform)
     }
 
     setLayerDefs (obj) {
