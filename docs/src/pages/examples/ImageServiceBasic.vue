@@ -3,11 +3,11 @@
       <template v-slot:content>
           <h4>Image Map Service</h4>
       </template>
-      <template v-slot:code>import {ImageMapService} from 'mapbox-gl-esri-sources'
+      <template v-slot:code>import {ImageService} from 'mapbox-gl-esri-sources'
           
 const imageSourceId = 'imagery-source'
 
-const imageService = new ImageMapService(imageSourceId, map, {
+const imageService = new ImageService(imageSourceId, map, {
     url: 'https://sampleserver6.arcgisonline.com/arcgis/rest/services/NLCDLandCover2001/ImageServer'
 })
 

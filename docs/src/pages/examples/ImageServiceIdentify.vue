@@ -4,9 +4,9 @@
           <h4>Identifying features from a Image Map Service</h4>
           <p>You can use the <code>.identify</code> method to retrieve information for a lat-lon.</p>
       </template>
-      <template v-slot:code>import {ImageMapService} from 'mapbox-gl-esri-sources'
+      <template v-slot:code>import {ImageService} from 'mapbox-gl-esri-sources'
 
-const imageService = new ImageMapService('image-source', map, {
+const imageService = new ImageService('image-source', map, {
     url: 'https://sampleserver6.arcgisonline.com/arcgis/rest/services/NLCDLandCover2001/ImageServer',
 })
 

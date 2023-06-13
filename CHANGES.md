@@ -1,6 +1,9 @@
 Change Log
 ==========
 
+### v0.0.6
+Fix up clearing the source cache in MapboxGL
+
 ### v0.0.5
 Add an `ImageService` class
 Fix `layers` parameter for identify calls.

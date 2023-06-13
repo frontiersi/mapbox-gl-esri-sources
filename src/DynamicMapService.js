@@ -93,8 +93,15 @@ export class DynamicMapService {
         const src = this._map.getSource(this._sourceId)
         src.tiles[0] = this._source.tiles[0]
         src._options = this._source
-        this._map.style.sourceCaches[this._sourceId].clearTiles()
-        this._map.style.sourceCaches[this._sourceId].update(this._map.transform)
+
+        // Old MapboxGL and MaplibreGL
+        if (this._map.style.sourceCaches) {
+            this._map.style.sourceCaches[this._sourceId].clearTiles()
+            this._map.style.sourceCaches[this._sourceId].update(this._map.transform)
+        } else if (this._map.style._otherSourceCaches) {
+            this._map.style.sourceCaches[this._sourceId].clearTiles()
+            this._map.style.sourceCaches[this._sourceId].update(this._map.transform)
+        }
     }
 
     setLayerDefs (obj) {

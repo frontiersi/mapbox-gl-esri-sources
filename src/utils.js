@@ -29,6 +29,10 @@ export function updateAttribution (newAttribution, sourceId, map) {
         }
     }
 
-    map.style.sourceCaches[sourceId]._source.attribution = newAttribution
+    if (map.style.sourceCaches) {
+        map.style.sourceCaches[sourceId]._source.attribution = newAttribution
+    } else if (map.style._otherSourceCaches) {
+        map.style._otherSourceCaches[sourceId]._source.attribution = newAttribution
+    }
     attributionController._updateAttributions()
 }
