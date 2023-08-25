@@ -1,5 +1,7 @@
 Change Log
 ==========
+### v0.0.7
+Update for clearing the source cache in newer versions of MapboxGL (eg 2.9+). 
 
 ### v0.0.6
 Fix up clearing the source cache in MapboxGL

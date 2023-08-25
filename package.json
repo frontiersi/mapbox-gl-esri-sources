@@ -1,6 +1,6 @@
 {
   "name": "mapbox-gl-esri-sources",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A module for making it easier to use Esri services in mapbox-gl or maplibre-gl.",
   "main": "dist/mapbox-gl-esri-sources.js",
   "module": "dist/mapbox-gl-esri-sources.esm.js",
@@ -27,7 +27,8 @@
     "file-loader": "^6.0.0",
     "json-loader": "^0.5.7",
     "load-json-file": "^5.1.0",
-    "maplibre-gl": "^1.13.0-rc.5",
+    "mapbox-gl": "^2.15.0",
+    "maplibre-gl": "^3.3.0",
     "remarkable": "^2.0.1",
     "rollup": "^1.32.1",
     "rollup-plugin-node-resolve": "^4.0.0",

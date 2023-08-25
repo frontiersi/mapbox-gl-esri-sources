@@ -3,8 +3,10 @@
 </template>
 
 <script>
-import { Map } from 'maplibre-gl/dist/maplibre-gl-unminified'
+import { Map } from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
+// import mapboxgl, { Map } from 'mapbox-gl'
+// import 'mapbox-gl/dist/mapbox-gl.css'
 
 export default {
     name: 'Map',
@@ -13,7 +15,7 @@ export default {
       const center = this.latLon ? this.latLon : [147.17507620575037, -32.617356560963294]
       const zoom = this.zoom ? this.zoom : 5
       const basemapUrl = this.basemap ? this.basemap : 'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json'
-
+      // mapboxgl.accessToken = ''
       const map = new Map({
         container: 'map',
         style: basemapUrl,
