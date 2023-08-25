@@ -94,8 +94,11 @@ export class DynamicMapService {
         src.tiles[0] = this._source.tiles[0]
         src._options = this._source
 
-        // Old MapboxGL and MaplibreGL
-        if (this._map.style.sourceCaches) {
+        if (src.setTiles) {
+            // New MapboxGL >= 2.13.0
+            src.setTiles(this._source.tiles);
+        } else if (this._map.style.sourceCaches) {
+            // Old MapboxGL and MaplibreGL
             this._map.style.sourceCaches[this._sourceId].clearTiles()
             this._map.style.sourceCaches[this._sourceId].update(this._map.transform)
         } else if (this._map.style._otherSourceCaches) {
